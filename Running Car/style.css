@@ -1,0 +1,452 @@
+*{
+    margin: 0;
+    padding: 0;
+
+}
+body{
+       animation: carMove linear 80s infinite forwards;  
+       /* overflow:hidden; */
+      animation-play-state: paused;
+      
+ 
+}
+
+ .sky{
+    height:100vh;
+    width: 4000vw;
+   
+    background-image: url(background.jpeg); 
+    position: absolute;
+    background-repeat: repeat;
+    
+} 
+.musicsound{
+   display: flex;
+   flex-direction: row; 
+ position: absolute;   
+bottom: 410px;
+left: -50px;
+cursor: pointer;
+}
+.sound{
+    margin-left:25px ;
+    color: white;
+}
+.music{
+    color: white;
+}
+.trafficLight{
+    width: 40px; 
+    
+    background-color:black;
+    display: inline-flex;
+    flex-direction: column;
+    align-items: center;
+    border: 1px solid #fff;
+    border-radius: 5px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+.traffic{
+    width: 30px; 
+   
+    display: inline-flex;
+    flex-direction: column;
+    position: absolute;
+    left:1200vw ;
+    top: 30vh;
+    align-items: center;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    margin: 0;
+    
+}
+
+ .trees{
+    height:100vh;
+    width:1030vw;
+      
+     background-image: url(trees.png); 
+ 
+    position: absolute;
+    top: -100px;
+    background-repeat: repeat-x;
+    
+
+} 
+.orangeLight,.redLight,.greenLight{
+    
+    width: 20px;
+    height: 20px;
+    position:relative;
+    background: color #000;;
+   
+    border :1px solid #fff;
+    border-radius: 40px;
+    margin:2px;
+
+    
+}
+.pole{
+    width: 10px;
+    height: 200px;
+    position:relative;
+    background-color: grey;
+    border :1px solid black;
+    border-top: 0;
+}
+
+ .city{
+    height:150vh;
+    width:1000vw;
+    top: 200px;;
+    background-image: url(backgroundcity.png); 
+    position: absolute;
+    background-repeat: repeat-x;
+    left: 2000vw;
+}  
+
+.track{
+    height: 30vh;
+    width: 4000vw;
+    background-image: url(track.png);
+  
+    position: absolute;
+    top: 70vh;
+    background-repeat: repeat-x;
+    /* animation: carMove linear 13s infinite; */
+    /* animation: shake linear 1s infinite;  */
+}
+ .car{
+    width: 380px;;
+    height: 100px;
+    background-image: url(car_body.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    position: absolute;
+    left: 70px;
+    bottom: 28vh;
+     animation: carM linear 80s infinite forwards; 
+    animation-play-state: paused;
+     
+    
+} 
+
+
+.wheel1 {
+   width:72px;
+   position: relative;
+   top: 38px;
+   left: 45px;
+   animation: wheelRotation linear .4s infinite; 
+   animation-play-state: paused; 
+}
+.wheel1 img{
+    width:72px;
+}
+.wheel2 {
+    width:72px;
+    position: relative;
+    top: -38px;
+    left: 237px;    
+    animation: wheelRotation linear .4s infinite;  
+    animation-play-state: paused; 
+}
+.wheel2 img{
+    width:72px;
+    animation-play-state: paused;
+}
+.gear{
+    margin: 10px;
+}
+.gear1,.gear2,.gear3,.gear4,.gearB,.gearN{
+    width: 30px;
+    position:absolute;
+    background-color:white;
+     bottom: 10px; 
+    left: 88vw;
+    cursor: pointer;
+    border :2px solid black;
+    border-radius: 40px;
+    padding-left: 12px;
+    }
+
+.gear2{
+     bottom: 65px; 
+}
+.gear3{
+
+    bottom: 115px;
+  }
+.gear4{
+    bottom: 170px;
+}
+.gearB{
+    bottom: 220px;
+   }
+.gearN{
+    bottom: 274px;
+    }
+ .horn{
+    width:40px ;
+    height: 1px;
+    left: 83vw;
+    position: absolute;
+    bottom: 33px;
+    background-color: white;
+    border :2px solid black;
+    border-radius: 40px;
+    text-align: center;
+    padding-bottom: 45px;
+    cursor: pointer;
+ }   
+.brake {
+    width: 100px;
+    
+    position: relative;
+    top:7px;
+    left: 78vw;
+    cursor: pointer;
+    /* animation: carM linear 10s infinite; */
+}
+.brake img{
+    width: 100px;
+    
+}
+.race img{
+    width: 100px;
+    
+}
+.race {
+    width:100px;
+    
+    position: relative;
+    top: -100px;
+    left: 85vw;
+    cursor: pointer;
+    /* animation: carM linear 10s infinite;  */
+}
+
+.score h1{
+ width: 200px;
+ height: 200px;
+ color: red;
+ position:absolute;
+ left:35vw;
+ bottom: 38vh;
+}
+.exit{
+    position: absolute;
+    padding: 10px 20px;
+    font-size: 24px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 4px;
+    text-decoration: none;
+    bottom:60vh;
+    left: 85vw;
+  }
+
+
+.race img{
+    width: 100px;
+ }
+     @keyframes wheelRotation{
+   100%{
+    transform: rotate(360deg);
+   }  
+   }
+  
+   @keyframes carMove{
+    100%{
+     transform: translateX(-3900vw);
+     
+    }
+  } 
+ @keyframes carM{
+    100%{
+     transform: translateX(3900vw);
+    } 
+ } 
+ @keyframes carF{
+    100%{
+     transform: translateX(150vw);
+    } 
+ } 
+ @keyframes shake{
+    0%{
+     transform: translateY(-5px);
+    }
+    50%{
+        transform: translateY(1px);
+       } 
+       100%{
+    transform: translateY(-5px);
+       }
+ }     
+
+
+ .car2{
+    width: 380px;
+    height: 100px;
+      background-image: url(car_body.png);  
+    background-size: cover;
+    background-repeat: no-repeat;
+    position: absolute;
+    left: -100vw;
+    bottom: 10vh;
+       animation: carM linear 40s infinite;  
+       animation-play-state: paused; 
+      /* animation: shake linear .6s infinite;    */
+} 
+
+
+.wheel11 {
+    width:72px;
+    position: relative;
+    top: 40px;
+    left: 45px;
+     animation: wheelRotation linear .1s infinite;  
+     animation-play-state: paused; 
+ }
+ .wheel11 img{
+     width:72px;
+ }
+ .wheel12 {
+     width:72px;
+     position: relative;
+     top: -35px;
+     left: 238px;    
+     animation: wheelRotation linear .1s infinite;
+     animation-play-state: paused;  
+ }
+ .wheel12 img{
+     width:72px;
+ }
+ .car3{
+    width: 400px;
+    height: 200px;
+      background-image: url(oldcar-removebg-preview.png);  
+    background-size: cover;
+    background-repeat: no-repeat;
+    position: absolute;
+    left: 1200vw;
+    bottom: -2vh;
+    animation: carMove linear 30s infinite;  
+       /* animation-play-state: paused;  */
+      /* animation: shake linear .6s infinite;    */
+}
+
+.wheel31 {
+    width:67px;
+    position: relative;
+    top: 139px;
+    left: 64px;
+     animation: wheelRotation linear .1s infinite;  
+     animation-play-state: paused; 
+ }
+ .wheel31 img{
+     width:67px;
+ }
+ .wheel32 {
+     width:67px;
+     position: relative;
+     top: 65px;
+     left: 260px;    
+     animation: wheelRotation linear .1s infinite;
+     animation-play-state: paused;  
+ }
+ .wheel32 img{
+     width:72px;
+ }
+ .carp{
+    width: 380px;
+    height: 200px;
+     
+    background-image: url(policecar-removebg-preview.png);  
+    background-size: cover;
+    background-repeat: no-repeat;
+    position: absolute;
+    left: 1000vw;
+    bottom: -6vh;
+       animation: carMove linear 30s infinite;   
+        animation-play-state: paused; 
+      /* animation: shake linear .6s infinite;    */
+} 
+
+.carp2{
+    width: 380px;
+    height: 200px;
+     
+    background-image: url(policecar-removebgleft.png);  
+    background-size: cover;
+    background-repeat: no-repeat;
+    position: absolute;
+    left: -50vw;
+    top:80px;
+     animation: carF linear 10s 1 ;   
+      
+         display:none; 
+        
+} 
+
+.wheelp1 {
+    width:72px;
+    position: relative;
+ top: 100px; 
+    
+    left: 265px;
+     animation: wheelRotation reverse  .1s infinite; 
+     animation-play-state: paused;  
+ }
+ .wheelp1 img{
+     width:72px;
+ }
+ .wheelp2 {
+     width:72px;
+     position: relative;
+     top: 28px;
+     left: 55px;    
+     animation: wheelRotation reverse .1s infinite;  
+     animation-play-state: paused;
+ }
+ .wheelp2 img{
+     width:72px;
+ }
+
+ .wheelp21 {
+    width:72px;
+    position: relative;
+ top: 100px; 
+    
+    left: 270px;
+     animation: wheelRotation reverse  .1s infinite; 
+ }
+ .wheelp21 img{
+     width:72px;
+ }
+ .wheelp22 {
+     width:72px;
+     position: relative;
+     top: 28px;
+     left: 70px;    
+     animation: wheelRotation reverse .1s infinite;  
+     
+ }
+ .wheelp22 img{
+     width:72px;
+ }
+ .siren img{
+  width: 15px;
+  position: absolute;
+  bottom: 135px;
+  left: 180px;
+ }
+ .siren2 img{
+    width: 15px;
+    position: absolute;
+    bottom: 135px;
+    left: 195px;
+   }

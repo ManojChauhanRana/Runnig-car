@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Race Game - End Page</title>
+  <style>
+    body {
+      text-align: center;
+      padding-top: 200px;
+      font-family: Arial, sans-serif;
+    }
+
+    h1 {
+      font-size: 36px;
+    }
+
+    p {
+      font-size: 24px;
+    }
+
+    button {
+      padding: 10px 20px;
+      font-size: 24px;
+      background-color: #4CAF50;
+      color: white;
+      border: none;
+      cursor: pointer;
+      border-radius: 4px;
+    }
+
+    button:hover {
+      background-color: #45a049;
+    }
+  </style>
+</head>
+<body>
+  <h1>Race Game - End Page</h1>
+  <p>Your Score: <span id="finalscore">0</span></p>
+  <button onclick="playAgain()">Play Again</button>
+
+  <script>
+    // Assuming you have the score stored in a variable named "score"
+  
+
+    var scoreValue = localStorage.getItem('scoreValue'); // Replace with the actual score value
+
+    document.getElementById('finalscore').textContent = scoreValue;
+
+    function playAgain() {
+      // Redirect to the starting page of the race game
+      window.location.href = 'index.html';
+    }
+  </script>
+</body>
+</html>

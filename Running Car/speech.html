@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Voice Command App</title>
+  <style>
+    body {
+      text-align: center;
+      padding-top: 200px;
+      font-family: Arial, sans-serif;
+    }
+
+    h1 {
+      font-size: 36px;
+      margin-bottom: 20px;
+    }
+
+    button {
+      padding: 10px 20px;
+      font-size: 24px;
+      background-color: #4CAF50;
+      color: white;
+      border: none;
+      cursor: pointer;
+      border-radius: 4px;
+    }
+
+    button:hover {
+      background-color: #45a049;
+    }
+  </style>
+</head>
+<body>
+  <h1>Voice Command App</h1>
+  <button id="startButton">Start Listening</button>
+  <div id="result"></div>
+
+  <script>
+    const startButton = document.getElementById('startButton');
+    const resultDiv = document.getElementById('result');
+    let recognition;
+
+    startButton.addEventListener('click', toggleRecognition);
+
+    function toggleRecognition() {
+      if (recognition && recognition.recognizing) {
+        recognition.stop();
+        startButton.textContent = 'Start Listening';
+      } else {
+        startRecognition();
+      }
+    }
+
+    function startRecognition() {
+      recognition = new window.webkitSpeechRecognition() || new window.SpeechRecognition();
+      recognition.lang = 'en-US';
+      recognition.interimResults = false;
+      recognition.maxAlternatives = 1;
+
+      recognition.onstart = function() {
+        startButton.textContent = 'Stop Listening';
+      };
+
+      recognition.onresult = function(event) {
+        const result = event.results[0][0].transcript;
+        displayCommand(result);
+        changeBackgroundColor(result);
+      };
+
+      recognition.start();
+    }
+
+    function displayCommand(command) {
+      resultDiv.textContent = 'Command: ' + command;
+    }
+
+    function changeBackgroundColor(command) {
+      const body = document.body;
+      if (command.includes('red')) {
+        body.style.backgroundColor = 'red';
+      } else if (command.includes('blue')) {
+        body.style.backgroundColor = 'blue';
+      } else if (command.includes('green')) {
+        body.style.backgroundColor = 'green';
+      } else {
+        body.style.backgroundColor = 'white';
+      }
+    }
+  </script>
+</body>
+</html>
+
+
+
+
